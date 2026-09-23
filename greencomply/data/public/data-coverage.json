@@ -1,0 +1,65 @@
+{
+  "as_of": "2026-09-23",
+  "purpose": "Explicitly distinguish real public source data from missing private facility data",
+  "available_public": [
+    {
+      "id": "rco_targets",
+      "file": "rco-targets.json",
+      "use": "Reference trajectory; eligibility and legal applicability must be assessed"
+    },
+    {
+      "id": "rec_market",
+      "file": "rec-market-observations.json",
+      "use": "Historical market benchmark only"
+    },
+    {
+      "id": "grid_emission_factors",
+      "status": "source_available_values_not_yet_extracted",
+      "source": "https://cea.nic.in/cdm-co2-baseline-database/?lang=en",
+      "next_action": "Download current CEA version and extract the correctly defined factor and fiscal year"
+    },
+    {
+      "id": "cerc_market_monitoring",
+      "status": "source_available_not_yet_ingested",
+      "source": "https://cercind.gov.in/report_MM-2026.html"
+    },
+    {
+      "id": "bee_reporting_templates",
+      "status": "source_available_not_yet_mapped",
+      "source": "https://www.beeindia.gov.in/show_content.php?lang=1&level=1&lid=291&ls_id=186"
+    }
+  ],
+  "missing_private": [
+    {
+      "id": "facility_monthly_kwh",
+      "owner": "Customer energy/facilities team",
+      "access": "Electricity invoices, interval meters, DISCOM portal export",
+      "impact": "Cannot calculate actual facility consumption or compliance denominator"
+    },
+    {
+      "id": "open_access_captive_drawal",
+      "owner": "Customer energy team and SLDC",
+      "access": "Open access schedules, settlement statements, captive generation and self-consumption records",
+      "impact": "Cannot assess designated-consumer applicability or correct RCO basis"
+    },
+    {
+      "id": "renewable_instruments",
+      "owner": "Customer procurement/sustainability and registry account",
+      "access": "PPA contracts, REC issuance/ownership/redemption evidence, generation and allocation statements",
+      "impact": "Cannot verify eligible renewable numerator or prevent double counting"
+    },
+    {
+      "id": "actual_tariffs_contracts",
+      "owner": "Customer finance/procurement",
+      "access": "Bills, PPA tariffs, open access charges, wheeling/banking and fees",
+      "impact": "Cannot calculate defensible savings or procurement ROI"
+    },
+    {
+      "id": "audit_signoff",
+      "owner": "Customer compliance and accredited auditor",
+      "access": "Evidence package and approval workflow",
+      "impact": "Cannot produce verified statutory submission"
+    }
+  ],
+  "policy": "Missing values must be null or marked unavailable; never silently substitute sample values."
+}
