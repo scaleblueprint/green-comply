@@ -1,0 +1,26 @@
+{
+  "dataset": "IEX publicly reported REC auction observations",
+  "as_of": "2026-09-23",
+  "unit": "INR per REC",
+  "rec_unit": "1 REC = 1 MWh",
+  "observations": [
+    {
+      "date": "2026-04-08",
+      "cleared_price_inr_per_rec": 339,
+      "cleared_volume_rec": 46799
+    },
+    {
+      "date": "2026-04-29",
+      "cleared_price_inr_per_rec": 370,
+      "cleared_volume_rec": 71014
+    }
+  ],
+  "source": {
+    "publisher": "Indian Energy Exchange",
+    "url": "https://www.iexindia.com/market-data/REC-market-from-dec22?fromDate=4&instrumentType=REC&toDate=4&viewGraph=false&year=2026"
+  },
+  "caveats": [
+    "Historical exchange observations, not a live quote or guaranteed procurement price.",
+    "Check certificate type, liquidity, fees, availability, applicable regulations, and settlement before use."
+  ]
+}
